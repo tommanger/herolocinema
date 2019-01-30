@@ -1,0 +1,15 @@
+<div [id]="movie.imdbID" class="movie-preview" [style.background-image]="'url('+movie.Poster+')'">
+    <div class="movie-details" (click)=" $event.stopPropagation()">
+        <div class="details-header">
+            <button (click)="closeDetails(movie.imdbID); $event.stopPropagation()" class="clostBtn">✖</button>
+            <h2>{{movie.Title | titlecase | cleanTxt}}</h2>
+        </div>
+        <h4>{{movie.Runtime}} | {{movie.Year}}</h4>
+        <h4>{{movie.Genre}}</h4>
+        <h4>{{movie.Director}}</h4>
+        <div class="details-btns">
+            <button (click)="editMovie()">Edit</button>
+            <button (click)="onDeleteMovie(movie.imdbID)">Delete</button>
+        </div>
+    </div>
+</div>

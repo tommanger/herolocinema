@@ -1,0 +1,49 @@
+<div class="movie-edit">
+  <mat-dialog-content>
+    <form [formGroup]="myForm">
+      <mat-form-field>
+        <input matInput formControlName="Title" placeholder="Movie Title" type="text">
+        <mat-error>
+          {{errorMsg(myForm.controls.Title)}}
+        </mat-error>
+      </mat-form-field>
+      <mat-dialog-actions *ngIf="!data">
+        <button (click)="searchMovie()" type="button">Search Movie</button>
+      </mat-dialog-actions>
+      <mat-form-field>
+        <input matInput formControlName="Year" placeholder="Movie Year" type="number">
+        <mat-error>
+          The year can be in min 1870 and max of 2019
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="Runtime" placeholder="Movie Runtime" type="text">
+        <mat-error>
+          You must fill in the field Runtime!
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="Genre" placeholder="Movie Genre" type="text">
+        <mat-error>
+          You must fill in the field Genre!
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="Director" placeholder="Movie Director" type="text">
+        <mat-error>
+          You must fill in the field Director!
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="Poster" placeholder="Movie Poster url" type="text">
+        <mat-error>
+          You must fill in the field Director!
+        </mat-error>
+      </mat-form-field>
+      <mat-dialog-actions>
+        <button type="submit" [disabled]="myForm.invalid" mat-raised-button [mat-dialog-close]="myForm.value" (click)="onSaveMovie()">Save</button>
+        <button mat-raised-button mat-dialog-close>CANCEL</button>
+      </mat-dialog-actions>
+    </form>
+  </mat-dialog-content>
+</div>

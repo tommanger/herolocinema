@@ -1,0 +1,11 @@
+<div class="navbar">
+  <div class="container">
+    <div class="logo"></div>
+    <h2 *ngIf="menuOpen" class="hamburger-btn" (click)="openMenu()">☰</h2>
+    <h2 *ngIf="!menuOpen" class="hamburger-btn" (click)="openMenu()">✖</h2>
+  </div>
+  <div class="menu">
+    <input (input)="searchMovies($event)" type="text" placeholder="Search">
+    <button class="add-btn" (click)="addMovie()">Add Movie</button>
+  </div>
+</div>

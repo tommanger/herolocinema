@@ -1,0 +1,3 @@
+<div class="movie-list" (click)="openDetails($event)">
+  <app-movie-preview *ngFor="let movie of movies | filter:searchTxt" [movie]="movie" (deleteMovie)="onDeleteMovie($event)"></app-movie-preview>
+</div>

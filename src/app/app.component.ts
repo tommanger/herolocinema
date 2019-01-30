@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'herolo-cinema';
+  searchTxt = ''
+  searchMovies(ev){
+    this.searchTxt = ev
+  }
 }

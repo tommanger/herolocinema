@@ -1,0 +1,17 @@
+.movie-list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 872px;
+    margin: auto;
+    margin-top: 10px;
+    
+    @media screen and (max-width: 890px) {
+        max-width: 654px;
+    }
+    @media screen and (max-width: 670px) {
+        max-width: 436px;
+    }
+    @media screen and (max-width: 455px) {
+        max-width: 95vw;
+    }
+}

@@ -1,0 +1,27 @@
+.movie-edit{
+    width: 75vw;
+    form{
+        display: flex;
+        flex-direction: column;       
+    }
+    input{
+        width: 70vw;
+        height: 35px;
+        background-color: #ece5f2;
+        border: 3px solid transparent;
+        border-radius: 1vw;
+        outline: none;
+        color: #543072;
+        font-weight: bold;
+    }
+    button{
+        margin: 10px;
+    }
+    .cancel-btn{
+        background-color: #695d73;
+    }
+}
+.movie-edit-btns{
+    display: flex;
+    justify-content: space-around;
+}
