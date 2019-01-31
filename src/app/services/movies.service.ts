@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class MoviesService {
-  private BASE_URL = 'http://www.omdbapi.com/?apikey=bdfb6376'
+  private BASE_URL = 'https://www.omdbapi.com/?apikey=bdfb6376'
   private moviesNames = [
     'glass',
     'Aquaman',
