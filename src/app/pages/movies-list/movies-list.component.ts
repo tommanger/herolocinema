@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class MoviesListComponent implements OnInit {
   movies: Movie[]
   private moviesSub: Subscription
+  
   @Input() searchTxt: string
 
   constructor(private moviesService: MoviesService, private dialog : MatDialog) { }
